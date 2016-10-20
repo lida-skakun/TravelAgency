@@ -240,6 +240,24 @@ export default class Filter extends React.Component {
 
     }
 }
+# IntelliJ IDEA
+    .idea/
+*.iml
+*.ipr
+*.iws
 
+# Eclipse
+    .settings/
+.classpath
+    .project
 
+# nodejs
+node
+node_modules/
+**/bundle.js
+**/bundle.js.map
+    .npm-debug.log
+
+.logs
+    .gitignore
 
