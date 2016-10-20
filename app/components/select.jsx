@@ -24,8 +24,3 @@ export default class Select extends React.Component {
 
 }
 
-<Select selector_id="from"
-        option_name1="Киев"
-        option_name2="Запорожье"
-        option_name3="Львов"
-        option_name4="Одесса" />

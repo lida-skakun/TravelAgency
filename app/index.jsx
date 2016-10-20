@@ -1,18 +1,18 @@
 import React from 'react';
 import {render} from 'react-dom';
-import Filter from './components/filter';
+import Main from './components/main';
 
 class App extends React.Component {
 
 
     render () {
         return <div>
-            <Filter />
-            
+            <Main />
         </div>;
     }
-}
 
+
+}
 
 
 render(<App/>, document.getElementById('content'));

@@ -236,28 +236,9 @@ export default class Filter extends React.Component {
     }
 
     handleButtonClick() {
-        alert(this.state.From + this.state.To + this.state.Adults + this.state.Children + this.state.Duration + this.state.Stars + this.state.Food + this.state.Lowest + this.state.Highest);
-
+        this.props.submitHandler(this.state);
     }
 }
-# IntelliJ IDEA
-    .idea/
-*.iml
-*.ipr
-*.iws
 
-# Eclipse
-    .settings/
-.classpath
-    .project
 
-# nodejs
-node
-node_modules/
-**/bundle.js
-**/bundle.js.map
-    .npm-debug.log
-
-.logs
-    .gitignore
 
