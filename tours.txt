@@ -1,17 +1,4 @@
-import React from 'react';
-import {render} from 'react-dom';
-import Main from './components/main';
-
-
-
-class App extends React.Component {
-
-
-    render () {
-
-        
-        var toursData = [
-            {
+{
                 id: "1",
                 where: "Турция",
                 city: "Алания",
@@ -179,17 +166,3 @@ class App extends React.Component {
                 main_foto: "img/Zlaten.jpg",
                 price: "29"
             }
-        ];
-        
-        return <div>
-            <Main toursData={toursData}/>
-            
-
-        </div>;
-    }
-
-
-}
-
-
-render(<App/>, document.getElementById('content'));

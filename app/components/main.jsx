@@ -1,32 +1,39 @@
 import React from 'react';
 import {render} from 'react-dom';
 import Filter from './filter';
-import Tour from './tour';
-
+import TourList from './tour_list';
+import {Grid, Row, Col} from 'react-bootstrap';
+import styles from '../../styles/main.css';
 
 export default class Main extends React.Component {
     constructor(props) {
         super(props);
         this.handlerFilterSubmit = this.handlerFilterSubmit.bind(this);
-        this.data = {
-            from: "Киев",
-            to: "Египет",
-            adults: "2"
-        }
-
     }
 
-
     render () {
+
         return <div>
-            <Filter submitHandler={this.handlerFilterSubmit} />
-            <Tour data={this.data.from}/>
+            <h1>ВЫБОР ТУРА</h1>
+            <div id="options">
+                <div id="hotels">
+                    <div id="tourTable">
+                        <Row className="show-grid">
+                            <Col xs={12} sm={5} md={4} lg={4} id="filters">
+                                <Filter submitHandler={this.handlerFilterSubmit} />
+                            </Col>
+                            <Col xs={12} sm={6} md={7} lg={7} id="result">
+                                <TourList toursData={this.props.toursData}/>
+                            </Col>
+                        </Row>
+                    </div>
+                </div>
+            </div>
         </div>;
     }
 
     handlerFilterSubmit(obj) {
-        this.filterResult = obj;
-        alert(this.filterResult.From);
+        this.tdata = obj;
     }
 
 }

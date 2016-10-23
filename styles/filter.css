@@ -1,0 +1,55 @@
+#filters {
+    background-color: rgba(255, 255, 254, 0.5);
+    vertical-align: middle;
+    text-align: center;
+    padding: 0px;
+
+}
+
+.filter_color {
+    border: 0.3em solid;
+    border-color: #D9D9D9;
+    padding: 1%;
+}
+
+h4 {
+    display: inline;
+    font-weight: bold;
+    text-align: center;
+    vertical-align: middle;
+    margin-bottom: 0px;
+    margin-top: 10%;
+}
+
+#apply {
+    background-color: #D9D9D9;
+    color: #808080;
+}
+
+#apply:hover, #apply:focus {
+    background-color: #CCCCCC;
+    color: #000000;
+}
+
+hr {
+    border-color: #808080;
+    margin: 2%;
+}
+
+
+@media (max-width:991px) {
+    #options {background: url("../img/2600.jpg"); background-size: 100%; background-repeat: no-repeat;}
+
+}
+
+@media (max-width:767px) {
+    #filters {background: url("../img/26000.jpg"); background-size: 100%; background-repeat: no-repeat; padding: 0px;}
+    .filter_color {background-color: rgba(255, 255, 254, 0.5);}
+}
+
+@media (max-width:480px) {
+    #filters {background: url("../img/26000.jpg"); background-size: 100%; background-repeat: no-repeat; padding: 0px;}
+    .filter_color {background-color: rgba(255, 255, 254, 0.5);}
+    #apply {margin: 1%;}
+    #head-filter {padding: 1%;}
+}
