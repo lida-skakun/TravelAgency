@@ -8,8 +8,6 @@ class App extends React.Component {
 
 
     render () {
-
-        
         var toursData = [
             {
                 id: "1",
@@ -180,11 +178,8 @@ class App extends React.Component {
                 price: "29"
             }
         ];
-        
         return <div>
             <Main toursData={toursData}/>
-            
-
         </div>;
     }
 

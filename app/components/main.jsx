@@ -33,7 +33,8 @@ export default class Main extends React.Component {
     }
 
     handlerFilterSubmit(obj) {
-        this.tdata = obj;
+        this.filterData = obj;
+        
     }
 
 }

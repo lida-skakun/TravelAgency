@@ -10,10 +10,10 @@ export default class TourList extends React.Component {
     }
 
     render () {
+        
         var toursNodes = this.props.toursData.map(function(tour) {
             return (
-                <Tour price={tour.price} key={tour.id} main_foto={tour.main_foto} hotelName={tour.hotelName} feeding={tour.feeding}
-                      about={tour.about} where={tour.where} city={tour.city} >
+                <Tour toursData={tour}>
                 </Tour>
             );
         });
