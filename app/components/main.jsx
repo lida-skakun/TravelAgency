@@ -394,12 +394,11 @@ export default class Main extends React.Component {
                 if ((filterData.Stars == "initial" || stars.includes(allTours[i].hotel)) && (food == "initial" || food.includes(allTours[i].feeding))
                     && ((filterData.Lowest <= costOfTour && filterData.Highest >= costOfTour) || (filterData.Lowest <= costOfTour && filterData.Highest == "initial" ))) {
                     toursToReturn.push(allTours[i]);
-                    this.state.toursData = toursToReturn;
-
                 }
             }
         }
-        // это проверка что действиетльно на выходе у меня 3 объекта
+        this.state.toursData = toursToReturn;
+        // это проверка что действиетльно d у меня 3 объекта
         console.log(this.state.toursData)
         return toursToReturn;
 
