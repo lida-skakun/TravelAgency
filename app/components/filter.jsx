@@ -19,13 +19,13 @@ export default class Filter extends React.Component {
         this.handleSelectHighest = this.handleSelectHighest.bind(this);
         this.state = {
             From: "initial",
-            To: "initial",
-            Adults: "initial",
+            To: "Египет",
+            Adults: "1",
             Children: "initial",
-            Duration: "initial",
+            Duration: "2",
             Stars: "initial",
             Food: "initial",
-            Lowest: "initial",
+            Lowest: "0",
             Highest: "initial"
         };
 
