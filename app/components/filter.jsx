@@ -20,11 +20,11 @@ export default class Filter extends React.Component {
         this.state = {
             From: "initial",
             To: "Египет",
-            Adults: "1",
-            Children: "initial",
+            Adults: "2",
+            Children: "Нет",
             Duration: "2",
-            Stars: "initial",
-            Food: "initial",
+            Stars: [],
+            Food: [],
             Lowest: "0",
             Highest: "initial"
         };
@@ -55,8 +55,8 @@ export default class Filter extends React.Component {
                             <Row className="show-grid">
                                 <Col xs={6} sm={6} md={6} lg={6}>
                                     <Selector selector_id="adults" title="Взрослые" function={this.handleSelectAdults}
-                                              value1="1" name1="1"
-                                              value2="2" name2="2"
+                                              value1="2" name1="2"
+                                              value2="1" name2="1"
                                               value3="3" name3="3"
                                               value4="4" name4="4" />
                                 </Col>
@@ -105,23 +105,19 @@ export default class Filter extends React.Component {
                     </div>
                     <div id="stars">
                         Категория отеля
-                        <FormGroup onClick={this.handleSelectStars}>
+                        <FormGroup onChange={this.handleSelectStars}>
                             <Checkbox inline  id="inlineCheckbox1" value="1">
                                 1
                             </Checkbox>
-                            {' '}
                             <Checkbox inline id="inlineCheckbox2" value="2">
                                 2
                             </Checkbox >
-                            {' '}
                             <Checkbox inline id="inlineCheckbox3" value="3">
                                 3
                             </Checkbox>
-                            {' '}
                             <Checkbox inline id="inlineCheckbox4" value="4">
                                 4
                             </Checkbox>
-                            {' '}
                             <Checkbox inline id="inlineCheckbox5" value="5">
                                 5
                             </Checkbox>
@@ -130,27 +126,22 @@ export default class Filter extends React.Component {
                     </div>
                     <div id="food">
                         Питание
-                        <FormGroup onClick={this.handleSelectFood}>
+                        <FormGroup onChange={this.handleSelectFood}>
                             <Checkbox inline  id="foodCheckbox1" value="OB">
                                 OB
                             </Checkbox>
-                            {' '}
                             <Checkbox inline id="foodCheckbox2" value="BB">
                                 BB
                             </Checkbox >
-                            {' '}
                             <Checkbox inline id="foodCheckbox3" value="HB">
                                 HB
                             </Checkbox>
-                            {' '}
                             <Checkbox inline id="foodCheckbox4" value="FB">
                                 FB
                             </Checkbox>
-                            {' '}
                             <Checkbox inline id="foodCheckbox5" value="AI">
                                 AI
                             </Checkbox>
-                            {' '}
                             <Checkbox inline id="foodCheckbox6" value="UAI">
                                 UAI
                             </Checkbox>
@@ -195,11 +186,21 @@ export default class Filter extends React.Component {
     }
 
     handleSelectStars(evt) {
-        this.state.Stars = evt.target.value;
+        if (!this.state.Stars.includes(evt.target.value)) {
+            this.state.Stars.push(evt.target.value);
+        } else {
+            var number = this.state.Stars.indexOf(evt.target.value);
+            this.state.Stars.splice(number, 1);
+        }
     }
 
     handleSelectFood(evt) {
-        this.state.Food = evt.target.value;
+        if (!this.state.Food.includes(evt.target.value)) {
+            this.state.Food.push(evt.target.value);
+        } else {
+            var number = this.state.Food.indexOf(evt.target.value);
+            this.state.Food.splice(number, 1);
+        }
     }
 
     handleSelectLowest(evt) {

@@ -12,8 +12,8 @@ export default class Tour extends React.Component {
     render() {
         return <div>
                 <Row className="show-grid" id="resultTour">
-                    <div className="price">{this.props.tourData.price}$</div>
-                    <div className="main_foto">{this.props.tourData.main_foto}</div>
+                    <div className="price">{this.props.tourData.costOfTour}$</div>
+                    <div className="main_foto"><img src={this.props.tourData.main_foto}/></div>
                     <div className="hotelName">{this.props.tourData.hotelName}</div>
                     <div className="whereCity"> <strong>Расположение:</strong> {this.props.tourData.where}, {this.props.tourData.city}</div>
                     <div></div>

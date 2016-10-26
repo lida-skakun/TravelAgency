@@ -3,6 +3,7 @@ import {render} from 'react-dom';
 import Filter from './filter';
 import TourList from './tour_list';
 import {Grid, Row, Col} from 'react-bootstrap';
+import styles from '../../styles/main.css';
 
 export default class Main extends React.Component {
     constructor(props) {
@@ -23,7 +24,7 @@ export default class Main extends React.Component {
                     email: "info@hedefbeach.com",
                     website: "http://www.hedefbeach.com",
                     main_foto: "img/Hedef.jpg",
-                    price: "93"
+                    costOfTour: "372"
                 },
                 {
                     id: "2",
@@ -37,7 +38,7 @@ export default class Main extends React.Component {
                     email: "ahmed.amer@sunrisehotels-egypt.com",
                     website: "https://festivalhotels.direct-reservation.net/en/accommodation",
                     main_foto: "img/Hawaii.jpg",
-                    price: "67"
+                    costOfTour: "268"
                 },
                 {
                     id: "3",
@@ -51,7 +52,7 @@ export default class Main extends React.Component {
                     email: "dbeach.reservation@gnet.tn",
                     website: "http://www.dreamsbeach-tunisia.com",
                     main_foto: "img/Dreams.jpg",
-                    price: "39"
+                    costOfTour: "156"
                 },
                 {
                     id: "4",
@@ -65,7 +66,7 @@ export default class Main extends React.Component {
                     email: "golf.residence@gnet.tn",
                     website: "http://golfresidence.com/",
                     main_foto: "img/Golf.jpg",
-                    price: "49"
+                    costOfTour: "196"
                 },
                 {
                     id: "5",
@@ -79,7 +80,7 @@ export default class Main extends React.Component {
                     email: "info.palace@elmouradi.com",
                     website: "http://www.elmouradi.com/index_en.aspx?ilng=2&curr=2&user=869",
                     main_foto: "img/El.jpg",
-                    price: "72"
+                    costOfTour: "288"
                 },
                 {
                     id: "6",
@@ -93,7 +94,7 @@ export default class Main extends React.Component {
                     email: "areshotels@hotmail.com",
                     website: "http://www.areshotels.com.tr/",
                     main_foto: "img/Ares.jpg",
-                    price: "62"
+                    costOfTour: "248"
                 },
                 {
                     id: "7",
@@ -107,7 +108,7 @@ export default class Main extends React.Component {
                     email: "info@cinargarden.com",
                     website: "http://cinargarden.com/",
                     main_foto: "img/Cinar.jpg",
-                    price: "68"
+                    costOfTour: "272"
                 },
                 {
                     id: "8",
@@ -121,7 +122,7 @@ export default class Main extends React.Component {
                     email: "albatrossharm@pickalbatros.com",
                     website: "http://www.pickalbatros.com/",
                     main_foto: "img/Aqua.jpg",
-                    price: "52"
+                    costOfTour: "208"
                 },
                 {
                     id: "9",
@@ -135,7 +136,7 @@ export default class Main extends React.Component {
                     email: "panorama@panorama-hrg.com",
                     website: "http://www.panoramabungalows.com",
                     main_foto: "img/Falcon.jpg",
-                    price: "43"
+                    costOfTour: "172"
                 },
                 {
                     id: "10",
@@ -149,7 +150,7 @@ export default class Main extends React.Component {
                     email: "reservations@grandhotelsofia.bg",
                     website: "http://www.grandhotelsofia.bg",
                     main_foto: "img/sofia.jpg",
-                    price: "71"
+                    costOfTour: "284"
                 },
                 {
                     id: "11",
@@ -163,7 +164,7 @@ export default class Main extends React.Component {
                     email: "info@anforabeach.bg",
                     website: "http://www.anforabeach@anforabeach.bg",
                     main_foto: "img/Amfora.jpg",
-                    price: "32"
+                    costOfTour: "128"
                 },
                 {
                     id: "12",
@@ -177,14 +178,13 @@ export default class Main extends React.Component {
                     email: "zlatenrog_varna@abv.bg",
                     website: "ttp://www.zlatenrog.com/bg",
                     main_foto: "img/Zlaten.jpg",
-                    price: "29"
+                    costOfTour: "116"
                 }
             ]
         };
     }
 
     render() {
-
         return <div>
             <h1>ВЫБОР ТУРА</h1>
             <div id="options">
@@ -205,7 +205,7 @@ export default class Main extends React.Component {
     }
 
     handlerFilterSubmit(filterData) {
-        this.state.toursData = this.callOnServerEmulation(filterData);
+        this.setState({toursData : this.callOnServerEmulation(filterData)})
     }
 
     callOnServerEmulation(filterData) {
@@ -222,7 +222,7 @@ export default class Main extends React.Component {
                 email: "info@hedefbeach.com",
                 website: "http://www.hedefbeach.com",
                 main_foto: "img/Hedef.jpg",
-                price: "93"
+                costOfTour: "372"
             },
             {
                 id: "2",
@@ -236,7 +236,7 @@ export default class Main extends React.Component {
                 email: "ahmed.amer@sunrisehotels-egypt.com",
                 website: "https://festivalhotels.direct-reservation.net/en/accommodation",
                 main_foto: "img/Hawaii.jpg",
-                price: "67"
+                costOfTour: "268"
             },
             {
                 id: "3",
@@ -250,7 +250,7 @@ export default class Main extends React.Component {
                 email: "dbeach.reservation@gnet.tn",
                 website: "http://www.dreamsbeach-tunisia.com",
                 main_foto: "img/Dreams.jpg",
-                price: "39"
+                costOfTour: "156"
             },
             {
                 id: "4",
@@ -264,7 +264,7 @@ export default class Main extends React.Component {
                 email: "golf.residence@gnet.tn",
                 website: "http://golfresidence.com/",
                 main_foto: "img/Golf.jpg",
-                price: "49"
+                costOfTour: "196"
             },
             {
                 id: "5",
@@ -278,7 +278,7 @@ export default class Main extends React.Component {
                 email: "info.palace@elmouradi.com",
                 website: "http://www.elmouradi.com/index_en.aspx?ilng=2&curr=2&user=869",
                 main_foto: "img/El.jpg",
-                price: "72"
+                costOfTour: "288"
             },
             {
                 id: "6",
@@ -292,7 +292,7 @@ export default class Main extends React.Component {
                 email: "areshotels@hotmail.com",
                 website: "http://www.areshotels.com.tr/",
                 main_foto: "img/Ares.jpg",
-                price: "62"
+                costOfTour: "248"
             },
             {
                 id: "7",
@@ -306,7 +306,7 @@ export default class Main extends React.Component {
                 email: "info@cinargarden.com",
                 website: "http://cinargarden.com/",
                 main_foto: "img/Cinar.jpg",
-                price: "68"
+                costOfTour: "272"
             },
             {
                 id: "8",
@@ -320,7 +320,7 @@ export default class Main extends React.Component {
                 email: "albatrossharm@pickalbatros.com",
                 website: "http://www.pickalbatros.com/",
                 main_foto: "img/Aqua.jpg",
-                price: "52"
+                costOfTour: "208"
             },
             {
                 id: "9",
@@ -334,7 +334,7 @@ export default class Main extends React.Component {
                 email: "panorama@panorama-hrg.com",
                 website: "http://www.panoramabungalows.com",
                 main_foto: "img/Falcon.jpg",
-                price: "43"
+                costOfTour: "172"
             },
             {
                 id: "10",
@@ -348,7 +348,7 @@ export default class Main extends React.Component {
                 email: "reservations@grandhotelsofia.bg",
                 website: "http://www.grandhotelsofia.bg",
                 main_foto: "img/sofia.jpg",
-                price: "71"
+                costOfTour: "284"
             },
             {
                 id: "11",
@@ -362,7 +362,7 @@ export default class Main extends React.Component {
                 email: "info@anforabeach.bg",
                 website: "http://www.anforabeach@anforabeach.bg",
                 main_foto: "img/Amfora.jpg",
-                price: "32"
+                costOfTour: "128"
             },
             {
                 id: "12",
@@ -376,35 +376,29 @@ export default class Main extends React.Component {
                 email: "zlatenrog_varna@abv.bg",
                 website: "ttp://www.zlatenrog.com/bg",
                 main_foto: "img/Zlaten.jpg",
-                price: "29"
+                costOfTour: "116"
             }
         ];
         var toursToReturn = [];
         for (var i = 0; i < allTours.length; i++) {
             if (filterData.To == allTours[i].where) {
-                var stars = filterData.Stars;
-                var food = filterData.Food;
-                if (filterData.Children == "Нет" || filterData.Children == "initial") {
+                if (filterData.Children == "Нет") {
                     var duration = parseInt(filterData.Duration);
-                    var costOfTour = Math.ceil(duration * allTours[i].price * filterData.Adults);
+                    var costOfTour = Math.ceil(duration * (allTours[i].costOfTour / 4) * filterData.Adults);
                 } else {
                     var duration = parseInt(filterData.Duration);
-                    var costOfTour = Math.ceil(duration * allTours[i].price * filterData.Adults + filterData.Children * allTours[i].price * 0.6);
+                    var costOfTour = Math.ceil(duration * (allTours[i].costOfTour / 4) * filterData.Adults + filterData.Children * (allTours[i].costOfTour / 4) * 0.6);
                 }
-                if ((filterData.Stars == "initial" || stars.includes(allTours[i].hotel)) && (food == "initial" || food.includes(allTours[i].feeding))
+                allTours[i].costOfTour = costOfTour;
+                if ((filterData.Stars == "" || filterData.Stars.includes(allTours[i].hotel)) && (filterData.Food == "" || filterData.Food.includes(allTours[i].feeding))
                     && ((filterData.Lowest <= costOfTour && filterData.Highest >= costOfTour) || (filterData.Lowest <= costOfTour && filterData.Highest == "initial" ))) {
                     toursToReturn.push(allTours[i]);
                 }
             }
         }
         this.state.toursData = toursToReturn;
-        // это проверка что действиетльно d у меня 3 объекта
-        console.log(this.state.toursData)
         return toursToReturn;
-
-
     }
-
 };
 
 
