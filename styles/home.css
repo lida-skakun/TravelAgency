@@ -67,6 +67,7 @@ h1 {
 	#Home h3 {font-size:16px; margin-top: 0%;}
 	#main-text {margin-top: 1%;}
 	.slide {padding: 30% 20% 20% 0%;}
+	.general {background: url("../img/mainsea600.jpg"); background-size: 100%;	background-repeat: no-repeat;}
 }
 
 @media (max-width:991px) {

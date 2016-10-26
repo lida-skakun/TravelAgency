@@ -60,13 +60,12 @@
 
 @media (max-width:1280px) {
     #lowest, #highest {width: 110px; height: auto;}
-    #result {height: 570px;}
+    #result {height: 600px;}
 }
-
 
 @media (max-width:767px) {
     #resultTour {margin-left: 5%;}
-    #result {margin-right: 3%; margin-left: 3%; height: 100%;}
+    #result {margin-right: 1%; margin-left: 3%; height: 100%;}
 }
 
 @media (max-width:480px) {
