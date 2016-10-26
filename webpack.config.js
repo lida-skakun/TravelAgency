@@ -6,6 +6,12 @@ module.exports = {
     entry: [
         'bootstrap-loader', './app/index.jsx'
     ],
+    plugins: [
+        new webpack.ProvidePlugin({
+            $: "jquery",
+            jQuery: "jquery"
+        })
+    ],
     module: {
         loaders: [
             {
@@ -15,7 +21,7 @@ module.exports = {
             {
                 test: /\.jsx?$/,
                 exclude: /node_modules/,
-                loaders: [ "babel" ],
+                loaders: [ "babel" ]
             },
             {
                 test: /\.(jpg|png)$/,
