@@ -21,7 +21,7 @@ export default class Filter extends React.Component {
             From: "initial",
             To: "Египет",
             Adults: "2",
-            Children: "Нет",
+            Children: "initial",
             Duration: "2",
             Stars: [],
             Food: [],

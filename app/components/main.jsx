@@ -1,5 +1,6 @@
 import React from 'react';
 import {render} from 'react-dom';
+import Header from './header';
 import Filter from './filter';
 import TourList from './tour_list';
 import {Grid, Row, Col} from 'react-bootstrap';
@@ -186,7 +187,7 @@ export default class Main extends React.Component {
 
     render() {
         return <div>
-            <h1>ВЫБОР ТУРА</h1>
+            <Header />
             <div id="options">
                 <div id="hotels">
                     <div id="tourTable">

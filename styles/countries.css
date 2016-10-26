@@ -1,0 +1,62 @@
+#Countries {
+    background-color: #FEFAF5;
+    padding-bottom: 1%;
+}
+
+.nav-tabs {
+    background-color: orange;
+    line-height: 1em;
+    font-size: 1.8em;
+    margin: 0% 0px 1% 0px;
+    text-align: center;
+    border: none;
+    font-family: "Open Sans",sans-serif;
+    font-style: italic;
+}
+
+.tab-content {
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-top: 3%;
+    margin-bottom: 3%;
+    text-align: center;
+    vertical-align: middle;
+}
+
+
+#top {
+    position: fixed;
+    bottom: 1%;
+    left: 1%;
+    opacity: 0.7;
+    z-index: 14;
+}
+
+.styleDiv {
+    border-color: #66afe9;
+    outline: 0;
+    -webkit-box-shadow: inset 0 5px 5px rgba(0,0,0,.075),0 0 18px rgba(255,165,0,.6);
+    box-shadow:inset 0 5px 5px rgba(0,0,0,.075),0 0 18px rgba(255,165,0,.6);
+    border-radius: 20px;
+    padding: 3%;
+    background-color: #ffffff;
+    font-size: 1.4em;
+    font-family: "Open Sans",sans-serif;
+    font-style: italic;
+    padding: 3%;
+}
+
+#country-foto {
+    float: right;
+    width: 50%;
+    padding-left: 5%;
+}
+
+@media (max-width:1280px) {
+    .styleDiv {font-size: 1.1em;}
+    .nav-tabs {font-size: 1.4em;}
+}
+
+@media (max-width:991px) {
+    .nav-tabs {font-size: 1.3em;}
+}

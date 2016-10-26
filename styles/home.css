@@ -1,0 +1,79 @@
+.general {
+	background: url("../img/mainsea.jpg");
+	background-size: 100%;
+	background-repeat: no-repeat;
+}
+
+h1 {
+	color: #2b669a;
+	background-color: orange;
+	font-weight: 400;
+	line-height: 1.5em;
+	font-size: 1.5em;
+	margin: 0%;
+	padding: 0.5% 0% 0.5% 0%;
+	text-align: center;
+	font-family: "Open Sans",sans-serif;
+	font-style: italic;
+}
+
+#main-text {
+	margin: 5% 0% 5% 5%;
+	padding: 0px;
+	font-family: "Open Sans",sans-serif;
+	font-weight: 500;
+	font-style: italic;
+
+}
+
+#Home h3 {
+	text-align: left;
+	padding: 1%;
+	background: white; /* For browsers that do not support gradients */
+	background: -webkit-linear-gradient(left, white , transparent); /* For Safari 5.1 to 6.0 */
+	background: -o-linear-gradient(right, white, transparent); /* For Opera 11.1 to 12.0 */
+	background: -moz-linear-gradient(right, white, transparent); /* For Firefox 3.6 to 15 */
+	background: linear-gradient(to right, white , transparent); /* Standard syntax (must be last) */
+	cursor: pointer;
+}
+
+#rightCell {
+	margin: 1% 0% 1% 1%;
+}
+
+#leftCell {
+	margin: 1% 15% 1% 1%;
+}
+
+#leftCell:hover, #rightCell:hover {
+	cursor: pointer;
+}
+
+#rightCell, #leftCell {
+	background-color: rgba(255, 255, 255, 0.5);
+	border-radius: 15px;
+	text-align: center;
+	font-size: 1.1em;
+}
+
+#img-cell {
+	text-align: center;
+	display: inline;
+}
+
+@media (max-width:1280px) {
+	#img-cell {max-width:50%; height:auto;}
+	.advantages {font-size:13px;}
+	#Home h3 {font-size:16px; margin-top: 0%;}
+	#main-text {margin-top: 1%;}
+	.slide {padding: 30% 20% 20% 0%;}
+}
+
+@media (max-width:991px) {
+	.general {background: url("../img/mainsea600.jpg"); background-size: 100%;	background-repeat: no-repeat;}
+	.slide {display: none;}
+}
+
+@media (max-width:540px) {
+	.general {background: url("../img/mainsea6000.jpg"); background-size: 100%;	background-repeat: no-repeat;}
+}
