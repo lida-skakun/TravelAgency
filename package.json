@@ -1,16 +1,14 @@
 {
-  "name": "travel",
+  "name": "Travel",
   "version": "1.0.0",
   "description": "travel agency",
   "main": "index.js",
   "dependencies": {
-    "bootstrap": "4.0.0-alpha.2",
-    "css-loader": "^0.25.0",
-    "jquery": "^3.1.0",
-    "react": "^15.3.2",
+    "react": "^15.0.2",
     "react-bootstrap": "^0.29.5",
-    "react-dom": "^15.3.2",
-    "style-loader": "^0.13.1"
+    "react-dom": "^15.0.2",
+    "react-router": "^3.0.0",
+    "react-tap-event-plugin": "^1.0.0"
   },
   "devDependencies": {
     "babel-cli": "^6.8.0",
@@ -20,22 +18,19 @@
     "babel-plugin-react-html-attrs": "^2.0.0",
     "babel-preset-es2015": "^6.6.0",
     "babel-preset-react": "^6.5.0",
-    "bootstrap": "^4.0.0-alpha.4",
-    "bootstrap-loader": "^2.0.0-beta.12",
+    "bootstrap-loader": "^1.3.0",
     "bootstrap-sass": "^3.3.7",
-    "css-loader": "^0.25.0",
     "extract-text-webpack-plugin": "^1.0.1",
+    "css-loader": "^0.25.0",
     "file-loader": "^0.9.0",
-    "image-webpack-loader": "^2.0.0",
-    "node-sass": "^3.10.1",
-    "postcss-loader": "^0.10.1",
-    "react-hot-loader": "^3.0.0-beta.4",
+    "jquery": "^3.1.0",
+    "node-sass": "^3.11.2",
     "resolve-url-loader": "^1.6.0",
-    "sass-loader": "^4.0.0",
+    "sass-loader": "^4.0.2",
     "style-loader": "^0.13.1",
     "url-loader": "^0.5.7",
-    "webpack": "^1.13.0",
-    "webpack-dev-server": "^1.15.1"
+    "webpack": "^1.13.3",
+    "webpack-dev-server": "^1.16.2"
   },
   "scripts": {
     "test": "mocha --compilers js:babel-core/register --require ./src/test/javascript/test_helper.js \"src/test/javascript/**/*@(.js|.jsx)\"",
